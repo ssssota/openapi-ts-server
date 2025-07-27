@@ -21,6 +21,10 @@
 		"dist"
 	],
 	"author": "TOMIKAWA Sotaro",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ssssota/openapi-ts-server.git"
+	},
 	"license": "MIT",
 	"dependencies": {
 		"openapi-typescript-helpers": "^0.0.15"
