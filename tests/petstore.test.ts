@@ -43,8 +43,6 @@ it("should handle request", async () => {
 		},
 	]);
 
-	const res3 = await handler(
-		new Request(`${baseUrl}not-found`),
-	);
+	const res3 = await handler(new Request(`${baseUrl}not-found`));
 	expect(res3.status).toBe(404);
 });

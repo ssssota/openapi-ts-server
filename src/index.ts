@@ -150,7 +150,8 @@ export function createHandler<Paths extends Record<string, any>>(
 		baseUrlPathSegments: options.baseUrl?.split("/").filter(Boolean) ?? [],
 	};
 	const context = createContext<Paths>();
-	const generated = typeof handlers === "function" ? handlers(context) : handlers;
+	const generated =
+		typeof handlers === "function" ? handlers(context) : handlers;
 	const entries = generated
 		.map((resolve) => resolve(resolvedOptions))
 		.sort(compareByPathSegments);
