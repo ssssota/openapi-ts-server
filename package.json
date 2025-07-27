@@ -9,7 +9,8 @@
 		"build": "tsdown",
 		"check": "biome check . && tsc",
 		"fmt": "biome check . --fix",
-		"test": "vitest"
+		"test": "vitest",
+		"prepublishOnly": "pnpm build"
 	},
 	"keywords": [
 		"openapi",

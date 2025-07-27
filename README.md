@@ -91,6 +91,18 @@ Deno.serve({ port: 3000 }, handler);
 Bun.serve({ fetch: handler, port: 3000 });
 ```
 
+### Vite dev server
+
+You can use it to build mock APIs.
+
+```typescript
+import { defineConfig } from "vite";
+import { devApi } from "vite-plugin-dev-api";
+export default defineConfig({
+  plugins: [devApi({ fetch: handler, nextIf404: true })],
+});
+```
+
 ## API Reference
 
 ### `createHandler<Paths>(generator, options?)`
